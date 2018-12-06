@@ -1,3 +1,18 @@
+var slideItem = document.getElementById('slide-item').innerHTML;
+Mustache.parse(slideItem);
+var listItems = '';
+
+for (var i = 0; i < mySlides.length; i++) {
+
+    listItems += Mustache.render(slideItem, mySlides[i]);
+};
+
+myCarousel.insertAdjacentHTML('beforeend', listItems);
+
+
+
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
     // options
@@ -5,6 +20,7 @@ var flkty = new Flickity(elem, {
     contain: true,
     pageDots: false,
     hash: true,
+    
 });
 
 // element argument can be a selector string

@@ -14,42 +14,58 @@
 <body>
     <button class="reset" id="btnStart">Restart</button>
 
-    <div class="main-carousel">
+    <div class="main-carousel" id="myCarousel"></div>
 
-        <div class="carousel-cell" id="carousel-cell1">
-            <div class="container" style="background-image:
-url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Australia_Day.jpg/1024px-Australia_Day.jpg);">
-                <p>Australia</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell2">
-            <div class="container" style="background-image:
-url(https://v.wpimg.pl/NzIzNjMzJxNmNWFceU42SX9JYQ5jDT4TJB1gGiFVf0J9SHpSdUJjTn5MeFx_T3ZLZggnBWAeK1cjGyAPJAghVysILxA0FicbZxA-DQ==);">
-                <p>Brazylia</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell3">
-            <div class="container" style="background-image:
-url(https://www.secretflying.com/wp-content/uploads/2015/05/new-york-5-750x400.jpg);">
-                <p>USA</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell4">
-            <div class="container" style="background-image:
-url(https://www.holidayguru.ie/wp-content/uploads/2018/02/Bali-Diving-Beach-iStock_000062843628_Large-2-1140x768.jpg);">
-                <p>Bali</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell5">
-            <div class="container" style="background-image:
-url(https://i.wpimg.pl/730x0/m.fotoblogia.pl/dsc-0603-b28a0a580708e3cc7ef2423.jpg);">
-                <p>Tajlandia</p>
-            </div>
-        </div>
-    </div>
     <div class="progress-bar"></div>
+
+<script id="slide-item" type="x-tmpl-mustache">
+    <div class="carousel-cell" id="carousel-cell{{index}}">
+      <div class="container" style="background-image: url( {{image}} )">
+        <h1> {{title}} </h1>
+        {{{description}}}
+      </div>
+    </div>
+    </script>
+    <script>
+        var mySlides = [{
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Australia_Day.jpg/1024px-Australia_Day.jpg',
+                title: 'Australia',
+                description: '<p>Canberra</p>',
+                index: 1,
+
+            },
+            {
+                image: 'https://v.wpimg.pl/NzIzNjMzJxNmNWFceU42SX9JYQ5jDT4TJB1gGiFVf0J9SHpSdUJjTn5MeFx_T3ZLZggnBWAeK1cjGyAPJAghVysILxA0FicbZxA-DQ==',
+                title: 'Brazylia',
+                description: '<p>Brasilia</p>',
+                index: 2,
+            },
+            {
+                image: 'https://www.secretflying.com/wp-content/uploads/2015/05/new-york-5-750x400.jpg',
+                title: 'USA',
+                description: '<p>Waszyngton</p>',
+                index: 3,
+
+            },
+            {
+                image: 'https://www.holidayguru.ie/wp-content/uploads/2018/02/Bali-Diving-Beach-iStock_000062843628_Large-2-1140x768.jpg',
+                title: 'Bali',
+                description: '<p>Denpasar</p>',
+                index: 4,
+            },
+            {
+                image: 'https://cdn.natemat.pl/c553a864352412225ba443f300660d5c,780,0,0,0.jpg',
+                title: 'Tajlandia',
+                description: '<p>Bangkok</p>',
+                index: 5,
+
+            },
+
+        ]
+    </script>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
 </body>
 

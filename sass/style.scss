@@ -1,29 +1,31 @@
 .main-carousel {
-    padding-top: 20px;
+    padding-top: 40px;
+    
 }
 
 .carousel-cell {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-right: 10px;
     text-align: center;
     line-height: 10;
     color: white;
     font-size: 30px;
+    margin: 0 auto;
+    display: block;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    height: 100%;
     background-size: cover;
     background-position: center;
 }
 
 .reset {
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 50%;
     color: white;
     background-color: black;
@@ -43,5 +45,17 @@
 @media screen and (min-width: 768px) {
     .carousel-cell {
         height: 500px;
+    
     }
+}
+p { 
+    position: absolute;
+    top: 35%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    display: inline;
 }
